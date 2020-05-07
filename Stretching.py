@@ -36,6 +36,7 @@ for i in range(10):
     for j in range(10):
         out[i][j] = 0
 
+cv2.imwrite('Outlier.jpg',out)
 cv2.imshow('Outlier',out)
 cv2.imshow('Original',img)
 
@@ -57,6 +58,8 @@ for i in range(x):
             res[i][j]=255
         else:
             res[i][j]=r
+
+cv2.imwrite('Respuesta.jpg',res)
 
 hisR = cv2.calcHist([res], [0], None, [256], [0, 256])
 cv2.imshow('Resultado',res)
